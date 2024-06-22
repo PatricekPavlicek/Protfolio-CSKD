@@ -1,0 +1,49 @@
+<form [formGroup]="form" (submit)="submit()">
+    <div class="form-heading">
+      <img class="form-heading-icon" src="../../assets/book.png" />
+      <p class="form-heading-text">Nová kniha</p>
+    </div>
+
+    <div class="input-box text-input">
+      <label for="fname">Název</label>
+      <input type="text" name="fname" id="fname" formControlName="nazev"/>
+    </div>
+
+    <div class="input-box">
+      <label for="release">Vydání</label>
+      <input type="number" name="release" id="release" min="1" formControlName="vydani" />
+    </div>
+
+    <div class="input-box">
+      <label for="pages">Počet stran</label>
+      <input type="number" name="pages" id="pages" min="1" formControlName="pocetStran" />
+    </div>
+
+    <div class="input-box">
+      <label for="genre">Žánr</label>
+      <select name="genre" id="genre" formControlName="zanr">
+        <option *ngFor="let zanr of zanrList" [ngValue]="zanr">{{ zanr}}</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <label for="release-date">Datum vydání</label>
+      <input type="date" name="release-date" id="release-date" formControlName="datumVydani" />
+    </div>
+
+    <div class="input-box">
+      <label for="autor">Autor</label>
+      <select name="autor" id="autor" formControlName="autor">
+        <option *ngFor="let autorDTO of autorDTOList" [ngValue]="autorDTO">{{ autorDTO.jmeno }} {{ autorDTO.prijmeni }}</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <a class="new-autor-container" target="_blank" [routerLink]="['/new/autor']">
+        <img class="new-autor-container-icon" src="../assets/plus.png" alt="plus-icon">
+        <p class="new-autor-container-text">Vytvořit nového autora</p>
+      </a>
+    </div>
+
+    <input class="submit-button" type="submit" name="submit" id="submit">
+  </form>

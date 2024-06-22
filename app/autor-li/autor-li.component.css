@@ -1,0 +1,15 @@
+.autor-link{
+    color: white;
+    text-decoration: none;
+}
+
+.autor-text{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.autor-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

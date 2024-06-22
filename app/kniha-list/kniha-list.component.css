@@ -1,0 +1,60 @@
+.container{
+    background-color: #AB2020;
+    color: white;
+    padding: 20px 50px;
+    margin-top: 30px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading-text{
+    position: relative;
+}
+
+.heading-text::before{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    left: -20px;
+}
+
+.search-bar{
+    position: relative;
+}
+
+.search-bar-input{
+    padding: 10px 40px 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+.search-bar-button{
+    border: none;
+    outline: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-button:hover{
+    cursor: pointer;
+}
+
+.search-bar-icon{
+    width: 20px;
+    height: 20px;
+}
